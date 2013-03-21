@@ -48,7 +48,7 @@ nav#main ul li:first-child {
 
 nav#main ul li.last {
   position: relative;
-  left:190px;
+  left:185px;
 }
 
 nav#main ul li:last-child {
@@ -194,6 +194,7 @@ form textarea {
 }
 
 
+
 /* misc */
 
 nav#main ul li#submit {
@@ -239,4 +240,57 @@ section.comments p {
   font-size: 12px;
   margin-top: 5px;
   padding-right: 32px;
+}
+
+nav#main li.login {
+  margin-top: 4px;
+}
+
+span a.reply {
+  text-decoration: none;
+  color: #828282;
+}
+
+
+div.pagination a {
+  text-indent: -999px;
+  color: transparent;
+  background: url("/images/more.png") no-repeat;
+  right: 999px;
+
+}
+
+div.pagination {
+  left: -999px;
+  color: transparent;
+}
+
+nav ul li#addcomment {
+  margin-right: 650px; 
+  position: relative;
+  top: 9px;
+  right: 5px;
+}
+
+
+footer ul {
+  padding-top: 20px;
+  border-top: 3px solid #ff6600;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+footer ul li {
+  display: inline;
+  color: black;
+  font-size: 11px;
+  border-right: 1px solid black; 
+  padding-right: 4px;
+}
+
+footer ul li:last-child {
+  border-right: none;
+}
+
+div.pagination a[rel="next"] {
+  /*display:none;*/
 }

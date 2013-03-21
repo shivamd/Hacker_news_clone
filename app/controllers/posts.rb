@@ -1,12 +1,12 @@
 
 
 get '/posts/new' do
+  redirect('/users/new') unless logged_in?
   @post = Post.new #for errors.
   erb :"/posts/new"
 end
 
 post '/posts/new' do 
-
   @post = Post.new(title: params[:title], url: params[:url], user_id: current_user.id)
 
   unless @post.save 

@@ -14,4 +14,26 @@
 	<small><%= @comment.user.name%> <%= (@comment.created_at).ago_in_words%>
   </small>
  <p><%= @comment.body %>  </p>
+ 
+  <form action="/comments/<%= @comment.id %>/comments/new" method="post">
+      <textarea name="body" rows="4" cols="50"></textarea>
+      <input type="submit" value="reply">
+  </form>
+
+ <section class="comments">
+
+  <% @comment.comments.each do |c| %>
+    <%= erb :"partials/_commentcommentvote", layout: false, locals: { comment: c, parent_comment: @comment } %>
+  <small><%= c.user.name%> <%= (c.created_at).ago_in_words%>
+  </small>
+ <p><%= c.body %> <span><a class="reply" href="/comments/<%= c.id %>">reply</a></span> </p>
+
+ 
+
+ <% end %>
+
 </section>
+
+
+</section>
+

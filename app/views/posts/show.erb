@@ -26,7 +26,7 @@
   	<%= erb :"partials/_commentvote", layout: false, locals: { comment: comment } %>
   <small><%= comment.user.name%> <%= (comment.created_at).ago_in_words%>
   </small>
- <p><%= comment.body %> <span><a href="/comments/<%= comment.id %>">reply</a></span> </p>
+ <p><%= comment.body %> <span><a class="reply" href="/comments/<%= comment.id %>">reply</a></span> </p>
 
  
 

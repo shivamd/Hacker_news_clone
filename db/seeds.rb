@@ -8,10 +8,11 @@ end
 
 User.all.each do |u|
   Post.all.each do |p|
-    p.comments.create(body: Faker::Lorem.paragraph, user_id: u.id )
+    p.comments.create(body: Faker::Lorem.paragraph, user_id: u.id)
     p.postvotes.create(user_id: u.id)
   end
   Comment.all.each do |c|
+    c.comments.create(body: Faker::Lorem.paragraph, user_id: u.id)
     c.commentvotes.create(user_id: u.id) 
   end 
 end
