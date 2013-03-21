@@ -1,0 +1,27 @@
+  <header>
+    <nav id="main">
+      <img src="/images/y.gif" height="20">
+      
+      <ul>
+          <li class="logo">Hacker News Clone</li>
+          <li>new</li>    
+          <li>threads</li>
+          <li>comments</li>
+          <li>ask</li>
+          <li>jobs</li>
+          <li><a href="/posts/new">submit</a></li>
+          <% if current_user %>
+          <li class="last"><%= current_user.name %></li>
+          <li>
+            <form action="/users/logout" method="post">
+              <input  type="hidden" name="_method" value="delete">
+              <input id="button" type="submit" value="signout">
+            </form>
+            </li>
+          <% else %>
+          <li><a href="/users/new">signup</a></li>
+          <li><a href="/users/login">Login</a></li>
+          <% end %>
+      </ul>
+    </nav>
+  </header>

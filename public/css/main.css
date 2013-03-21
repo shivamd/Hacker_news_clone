@@ -9,52 +9,105 @@ body {
   padding-top: 10px;
 }
 
-h1, #main ul, #main li {
+
+
+#logo, #main ul, #main li {
   display: inline;
 }
 
-h1 {
+.logo {
   font-size:0.9em;
   padding-left: 5px;
 }
 
-nav#main ul li {
-  font-size: 0.8em;
+nav#main ul {
+  /*margin-top: 10px;*/
+  /*padding-top: 10px;*/
+  padding: 0px;
+  height: 21px;
+  position: relative;
+  bottom: 5px;
 }
 
 
+nav#main ul li {
+  font-size: 0.8em;
+  border-right: 1px solid black;
+  padding-right: 5px;
+}
+
+nav#main ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav#main ul li:first-child {
+  font-weight: bold;
+  border-right: none;
+}
+
+nav#main ul li.last {
+  position: relative;
+  left:190px;
+}
+
+nav#main ul li:last-child {
+  float:right;
+  border-right: 0;
+}
+
+nav#main ul li:last-child input {
+  font-size: 12px;
+}
+
+nav#main ul li input#button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #ff6600;
+  margin-top: 3px; 
+}
+nav#main ul li:nth-child(7) {
+  border-right: 0;
+}
 
 #main {
   background-color: #ff6600;
   height: 25px;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 ol {
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 img {
   position: relative;
-  top: 3px;
+  top: 2px;
+  left: 1px;
+  border: 1px solid white;
+
 }
 
 ol li {
   font-size: 13px;
-  padding-bottom: 5px;
-}
-
-ol li{
   color: #828282;
+  padding-bottom: 5px;
+  margin-bottom: 0;
 }
 
-ol li a:visited {
-  background-color: yellow;
-}
 
 ol li a {
   text-decoration: none;
   color: #000;
   font-size: 13px;
+}
+
+ol li small a {
+  font-size: 11px;
+  color: #828282;
 }
 
 span {
@@ -63,4 +116,127 @@ span {
 small {
   display:block;
   font-size: 9px;
+}
+
+
+ol img {
+  /*margin-bottom: 5px;*/
+  position: relative;
+  bottom: 100px;
+  right: 10px;
+
+}
+
+form.vote, form.commentvote {
+  display: inline; 
+  position: absolute;
+}
+
+
+input[type=submit].vote {
+  background: url("/images/arrow.gif") no-repeat center center;
+  width: 8px;
+  height: 2px;
+  border: none;
+  color: transparent;
+  position: relative;
+  bottom: 22px;
+  right: 42px;
+}
+
+input[type=submit].commentvote {
+  background: url("/images/arrow.gif") no-repeat center center;
+  width: 8px;
+  height: 2px;
+  border: none;
+  color: transparent;
+  position: relative;
+  right: 43px;
+  top: 3px;
+
+}
+
+
+
+/* forms */
+
+form label {
+  color: #828282;
+  font-size: 0.8em;
+}
+
+form.post section label#url{
+  padding-right: 8px;
+}
+
+form.post input {
+  height: 14px;
+  width: 410px;
+}
+
+form input[type=submit] {
+  width: 50px;
+  height: 18px;
+  font-size: 10px;
+  margin-left: 32px;
+  margin-bottom: 20px;
+}
+
+
+
+form.post section {
+  margin-bottom: 20px;
+}
+
+form textarea {
+  display: block;
+  margin-left: 15px;
+}
+
+
+/* misc */
+
+nav#main ul li#submit {
+  position: relative;
+  right: 715px;
+  top: 10px;
+}
+
+li#post {
+  list-style: none;
+
+}
+
+ol.show {
+  padding-left: 15px;
+}
+
+
+textarea + input[type=submit] {
+  width: 85px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+section.comments {
+  margin-left: 15px;
+  height: 400px;
+}
+
+section.comments small {
+  color: #828282;
+  position: relative;
+}
+
+section.comments span {
+  display:block;
+  text-decoration: underline;
+  padding-top: 5px;
+  font-size: 10px;
+}
+
+section.comments p {
+  font-size: 12px;
+  margin-top: 5px;
+  padding-right: 32px;
 }

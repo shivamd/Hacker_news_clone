@@ -13,4 +13,9 @@ post '/posts/:id/comments/new' do
     @success = "You made a comment!"
     redirect("/posts/#{params[:id]}")
   end  
-end  
+end 
+
+get '/comments/:id' do 
+	@comment = Comment.find(params[:id])
+	erb :"/comments/show"
+end 

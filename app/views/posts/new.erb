@@ -1,16 +1,27 @@
-<form action="/posts/new" method="post">
+  <header>
+    <nav id="main">
+      <img src="/images/y.gif" height="20">
+      
+      <ul>
+          <li id="submit" class="logo">Submit</li>
+      </ul>
+    </nav>
+  </header>
 
-  <fieldset>
-      <legend>Post</legend>
 
-      <label for="title">Title</label>
+<div class="container">
+
+<form class="post" action="/posts/new" method="post">
+
+		<section>
+      <label for="title">title</label>
       <input type="text" name="title" value="<%= @post.title%>">
+    </section>
 
-      <label for="url">Url</label>
+    <section>
+      <label id="url" for="url">url</label>
       <input type="text" name="url">
-
-      <input type="submit" value="create_post">
-  </fieldset>
-
+    </section>
+      <input type="submit" value="submit">
 
 </form>

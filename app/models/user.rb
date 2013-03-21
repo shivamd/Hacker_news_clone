@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :postvotes
   has_many :commentvotes
+  has_many :notes
 
 
   include BCrypt

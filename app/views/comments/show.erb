@@ -1,0 +1,17 @@
+  <header>
+    <nav id="main">
+      <img src="/images/y.gif" height="20">
+      
+      <ul>
+          <li id="addcomment" class="logo">Add comment</li>
+      </ul>
+    </nav>
+  </header>
+
+<div class="container">
+
+<section class="comments">
+	<small><%= @comment.user.name%> <%= (@comment.created_at).ago_in_words%>
+  </small>
+ <p><%= @comment.body %>  </p>
+</section>
