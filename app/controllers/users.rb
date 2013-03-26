@@ -36,3 +36,8 @@ delete '/users/logout' do
   session[:token] = nil
   redirect ('/')
 end  
+
+get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :"users/show"
+end

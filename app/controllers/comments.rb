@@ -6,8 +6,9 @@ end
 
 post '/posts/:id/comments/new' do
   redirect ('users/new') unless logged_in?
-  @comment = Comment.new(body: params[:body], user_id: current_user.id, post_id: params[:id] )
-
+  # @comment = Comment.new(body: params[:body], user_id: current_user.id, commentable_id: params[:id] )
+  post = Post.find(params[:id])
+  @comment = post.comments.new(body: params[:body], user_id: current_user.id, commentable_id: params[:id] )
   unless @comment.save
     erb:"posts/show" 
   else

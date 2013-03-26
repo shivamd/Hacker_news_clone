@@ -294,3 +294,7 @@ footer ul li:last-child {
 div.pagination a[rel="next"] {
   /*display:none;*/
 }
+
+/*section ul li {
+  list-style: none;
+}*/

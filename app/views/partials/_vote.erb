@@ -1,7 +1,7 @@
  <% if current_user %>
       <% unless post.user.id == current_user.id || post.postvotes.find_by_user_id(current_user.id) %>
       
-      <form class="vote" action="<%= current_user.id%>/<%= post.id%>/postvotes/new" method="post">
+      <form class="vote" action="<%= post.id %>/postvotes/new" method="post">
         <input class="vote"type="submit" value="">
       </form>
       <% end %>

@@ -1,0 +1,10 @@
+<%= erb :"partials/_nav", layout: false %>
+<div class="container">
+<section id="user">
+	<ul>
+		<li>user: <%= @user.name%></li>
+		<li>created: <%= @user.created_at %>.ago_in_words</li>
+		<li>comments: <%= @user.comments.count %></li>
+		<li>posts: <%= @user.posts.count %></li>
+	</ul>
+	</section>
