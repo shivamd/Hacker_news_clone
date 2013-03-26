@@ -21,5 +21,5 @@ group :test do
   gem 'rspec'
 end
 
-gem 'time_ago_in_words'
+
 gem 'will_paginate'
