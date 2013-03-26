@@ -16,10 +16,10 @@ gem 'activerecord'
 gem 'rake'
 gem 'bcrypt-ruby'
 
-group :test do
-  gem 'faker'
-  gem 'rspec'
-end
+# group :test do
+#   gem 'faker'
+#   gem 'rspec'
+# end
 
 
 gem 'will_paginate'
